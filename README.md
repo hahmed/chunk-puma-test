@@ -13,7 +13,9 @@ Steps to reproduce the issue;
 
 If we have a look at `app/controllers/posts_controller.rb` inside the create action, when calling `request.env.*` the outputs are;
 
+```
 STDERR.puts request.env['rack.input'].read # => {"abc": "123"}
 STDERR.puts request.body # => #<File:0x00007f8460b2b088>
 STDERR.puts request.raw_post # =>
 STDERR.puts request.body.read # =>
+```
